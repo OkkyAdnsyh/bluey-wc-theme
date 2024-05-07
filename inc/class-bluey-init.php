@@ -15,7 +15,7 @@
             public function __construct(){
                 add_action( 'init', array($this, setup()) );
                 add_action( 'wp_enqueue_scripts', array($this, register_style()), 30 );
-                add_action( 'wp_enqueue_scripts', array($this, register_script()), 30 );
+                add_action( 'wp_enqueue_scripts', array($this, register_script()), 10 );
             }
 
             /**
@@ -200,6 +200,11 @@
 			     * Add support for responsive embedded content.
 			     */
 			    add_theme_support( 'responsive-embeds' );
+
+                /**
+                 * Woocommerce theme support 
+                 */
+                add_theme_support( 'woocommerce' );
 
             }
 
