@@ -13,7 +13,9 @@
              * Execute function when class created
              */
             public function __construct(){
-                add_action( 'init', $this->setup());
+                add_action( 'init', array($this, setup()) );
+                add_action( 'wp_enqueue_scripts', array($this, register_style()), 30 );
+                add_action( 'wp_enqueue_scripts', array($this, register_script()), 30 );
             }
 
             /**
@@ -31,6 +33,11 @@
 			     * @link https://developer.wordpress.org/reference/functions/add_theme_support/#Post_Thumbnails
 			     */
 			    add_theme_support( 'post-thumbnails' );
+
+                /**
+                 * Enable menu creation support
+                 */
+                add_theme_support( 'menus' );
 
 			    /**
 			     * Enable support for site logo.
@@ -194,6 +201,32 @@
 			     */
 			    add_theme_support( 'responsive-embeds' );
 
+            }
+
+            /**
+             * Register style 
+             */
+            public function register_style(){
+                global $theme_version;
+                /**
+                 * Enqueue main style & editor style
+                 */
+                wp_enqueue_style( 'main_style', get_template_directory_uri(  ) . 'css/style.css', $theme_version);
+                add_editor_style( get_template_directory_uri(  ) . 'editor-style.css' );
+            }
+
+            /**
+             * Register function
+             */
+            public function register_script(){
+                /**
+                 * Enqueue main script and conditional script
+                 */
+                wp_enqueue_script( 'main', get_template_directory_uri(  ) . 'script/script.js', array('jquery'), $theme_version, true );
+
+                if(is_home(  )){
+                    wp_enqueue_script( 'slider', get_template_directory_uri(  ) . 'script/slider.js', array('jquery'), $theme_version, true )l;
+                }
             }
 
 
