@@ -13,9 +13,9 @@
              * Execute function when class created
              */
             public function __construct(){
-                add_action( 'init', array($this, setup()) );
-                add_action( 'wp_enqueue_scripts', array($this, register_style()), 30 );
-                add_action( 'wp_enqueue_scripts', array($this, register_script()), 10 );
+                add_action( 'init', array($this, 'setup') );
+                add_action( 'wp_enqueue_scripts', array($this, 'register_style'), 30 );
+                add_action( 'wp_enqueue_scripts', array($this, 'register_script'), 10 );
             }
 
             /**
@@ -230,7 +230,7 @@
                 wp_enqueue_script( 'main', get_template_directory_uri(  ) . 'script/script.js', array('jquery'), $theme_version, true );
 
                 if(is_home(  )){
-                    wp_enqueue_script( 'slider', get_template_directory_uri(  ) . 'script/slider.js', array('jquery'), $theme_version, true )l;
+                    wp_enqueue_script( 'slider', get_template_directory_uri(  ) . 'script/slider.js', array('jquery'), $theme_version, true );
                 }
             }
 
