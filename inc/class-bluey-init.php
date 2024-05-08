@@ -13,7 +13,8 @@
              * Execute function when class created
              */
             public function __construct(){
-                add_action( 'init', array($this, 'setup') );
+                add_action( 'after_setup_theme', array($this, 'setup') );
+				add_action( 'after_switch_theme', array($this, 'register_new_page') );
                 add_action( 'wp_enqueue_scripts', array($this, 'register_style'), 30 );
                 add_action( 'wp_enqueue_scripts', array($this, 'register_script'), 10 );
             }
@@ -233,8 +234,38 @@
                     wp_enqueue_script( 'slider', get_template_directory_uri(  ) . 'script/slider.js', array('jquery'), $theme_version, true );
                 }
             }
+			/**
+			 * Insert tempalate page
+			 */
+			public function add_new_page($page_name){
+				$check_page = new WP_query( 
+					array(
+						'post_type' => 'page',
+						'post_title' => $page_name,
+						'post_status' => 'publish'
+					)
+				 );
+				$page_title = __($page_name, 'wc-bluey');
 
+				$new_page = array(
+					'post_type' => 'page',
+					'post_title' => $page_title,
+					'post_content' => ''
+				);
 
+				// if page not exist create
+				if(!isset($check_page->ID)){
+					wp_insert_post( $new_page );
+				}
+			}
+			/**
+			 * Register faq, about-us, contact
+			 */
+			public function register_new_page(){
+				$this->add_new_page( 'About Us' );
+				$this->add_new_page( 'F.A.Q' );
+				$this->add_new_page( 'Contact' );
+			}
         }
     }
 
