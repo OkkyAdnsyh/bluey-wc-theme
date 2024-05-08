@@ -96,4 +96,63 @@ span {
   font-weight: 400;
   color: var(--tertier-color);
   font-size: 2.2rem;
+}
+
+.shop--page {
+  display: flex;
+  padding-inline: 10.5rem;
+  justify-content: space-between;
+}
+.shop--page .content--container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7.4rem;
+}
+.shop--page .content--container .title--group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.2rem;
+}
+.shop--page .content--container .title--group h1 {
+  font-family: var(--par-font);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-black);
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.2rem;
+       column-gap: 1.2rem;
+}
+.shop--page .content--container .title--group h1::before {
+  content: "";
+  width: 2.7rem;
+  height: 1px;
+  background-color: var(--text-black);
+}
+.shop--page .content--container .title--group h2 {
+  font-family: var(--primary-font);
+  font-size: 10rem;
+  font-weight: 400;
+  color: var(--sec-color);
+  width: 75%;
+}
+.shop--page .content--container .title--group p {
+  font-family: var(--par-font);
+  font-size: 1.8rem;
+  color: var(--text-black);
+  line-height: 3.8rem;
+  width: 75%;
+}
+.shop--page .content--container .title--group p b {
+  font-weight: 700;
+}
+.shop--page .icon {
+  width: 100%;
+  height: 100%;
+}
+.shop--page .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }/*# sourceMappingURL=style.css.map */

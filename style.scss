@@ -108,3 +108,67 @@ span{
         }
     }
 }
+
+.shop--page{
+    display: flex;
+    padding-inline: 10.5rem;
+    justify-content: space-between;
+
+    .content--container{
+        display: flex;
+        flex-direction: column;
+        row-gap: 7.4rem;
+
+        .title--group{
+            display: flex;
+            flex-direction: column;
+            row-gap: 2.2rem;
+
+            h1{
+                font-family: var(--par-font);
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: var(--text-black);
+                display: flex;
+                align-items: center;
+                column-gap: 1.2rem;
+
+                &::before{
+                    content: "";
+                    width: 2.7rem;
+                    height: 1px;
+                    background-color: var(--text-black);
+                }
+            }
+            h2{
+                font-family: var(--primary-font);
+                font-size: 10rem;
+                font-weight: 400;
+                color: var(--sec-color);
+                width: 75%;
+            }
+            p{
+                font-family: var(--par-font);
+                font-size: 1.8rem;
+                color: var(--text-black);
+                line-height: 3.8rem;
+                width: 75%;
+    
+                b{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .icon{
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
