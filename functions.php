@@ -8,7 +8,7 @@
 /**
  * Assign the WC Bluey Theme version to a var
  */
-$theme              = wp_get_theme( 'wc-bluey-theme' );
+$theme = wp_get_theme( 'wc-bluey' );
 $theme_version = $theme['Version'];
 
 $theme_init = (object) array(

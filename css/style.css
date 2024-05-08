@@ -53,4 +53,47 @@ b,
 span {
   font: inherit;
   color: inherit;
+}
+
+.wrapper {
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.nav-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  padding-inline: 7.2rem;
+  margin-top: 3rem;
+}
+.nav-wrapper .nav-container {
+  width: 100%;
+  display: flex;
+  border: 2px solid var(--accent-color);
+  border-radius: 46.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 7.6em;
+  background: var(--primary-color);
+}
+.nav-wrapper .nav-container .nav-item {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: scale(1);
+  transition: transform 0.6s ease-in-out;
+}
+.nav-wrapper .nav-container .nav-item:hover {
+  transform: scale(1.2);
+}
+.nav-wrapper .nav-container .nav-item .nav-link {
+  font-family: var(--sec-font);
+  font-weight: 400;
+  color: var(--tertier-color);
+  font-size: 2.2rem;
 }/*# sourceMappingURL=style.css.map */
