@@ -250,7 +250,8 @@
 				$new_page = array(
 					'post_type' => 'page',
 					'post_title' => $page_title,
-					'post_content' => ''
+					'post_content' => '',
+					'post_status' => 'publish'
 				);
 
 				// if page not exist create

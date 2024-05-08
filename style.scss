@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-family: "Hoon Ice Tea";
+    src: url(./font/hoon-ice-tea.woff);
+    src: url(./font/hoon-ice-tea.woff2);
+    src: url(./font/hoon-ice-tea.ttf);
+}
+
+@font-face {
+    font-family: "Hoon Parasol";
+    src: url(./font/hoon-parasol.woff);
+    src: url(./font/hoon-parasol.woff2);
+    src: url(./font/hoon-parasol.ttf);
+}
+
+:root{
+    // font
+    --primary-font : "Hoon Parasol", sans-serif;
+    --sec-font : "Hoon Ice Tea", sans-serif;
+    --par-font : "Inter", serif;
+
+    // color
+    --primary-color : #F5FDFF;
+    --sec-color : #7FB5C3;
+    --tertier-color : #5591A1;
+    --accent-color : #CFECF4;
+    --text-black : #454545;
+
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size : calc(.625 * 16px);
+}
+
+body{
+    width: 100vw;
+    background-color: var(--primary-color);
+    overflow-x: hidden;
+}
+
+a,
+button,
+input{
+    color: black;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+ul{
+    list-style: none;
+}
+
+b,
+span{
+    font: inherit;
+    color: inherit;
+}
