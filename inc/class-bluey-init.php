@@ -217,7 +217,7 @@
                 /**
                  * Enqueue main style & editor style
                  */
-                wp_enqueue_style( 'main_style', get_template_directory_uri(  ) . 'css/style.css', $theme_version);
+                wp_enqueue_style( 'main_style', get_template_directory_uri(  ) . '/css/style.css', $theme_version);
                 add_editor_style( get_template_directory_uri(  ) . 'editor-style.css' );
             }
 
@@ -228,6 +228,7 @@
                 /**
                  * Enqueue main script and conditional script
                  */
+				global $theme_version;
                 wp_enqueue_script( 'main', get_template_directory_uri(  ) . 'script/script.js', array('jquery'), $theme_version, true );
 
                 if(is_home(  )){
