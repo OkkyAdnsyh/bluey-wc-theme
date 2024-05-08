@@ -13,7 +13,7 @@
              * Execute function when class created
              */
             public function __construct(){
-                add_action( 'after_theme_setup', array($this, 'setup') );
+                add_action( 'after_setup_theme', array($this, 'setup') );
 				add_action( 'after_switch_theme', array($this, 'register_new_page') );
                 add_action( 'wp_enqueue_scripts', array($this, 'register_style'), 30 );
                 add_action( 'wp_enqueue_scripts', array($this, 'register_script'), 10 );
