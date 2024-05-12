@@ -19,3 +19,5 @@ $theme_init = (object) array(
 	 */
 	'main'       => require 'inc/class-bluey-init.php',
 );
+
+require 'inc/bluey-hook-function.php';

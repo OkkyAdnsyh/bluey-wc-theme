@@ -13,6 +13,7 @@
     <?php wp_head(  ); ?>
 </head>
 <body <?php body_class( ); ?> >
+    <?php wp_body_open( ); ?>
     <div class="wrapper">
         <nav class="nav-wrapper">
             <ul class="nav-container">

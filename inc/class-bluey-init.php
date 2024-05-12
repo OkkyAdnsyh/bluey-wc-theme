@@ -149,11 +149,6 @@
 			    add_theme_support( 'customize-selective-refresh-widgets' );
 
 			    /**
-			     * Add support for Block Styles.
-			     */
-			    add_theme_support( 'wp-block-styles' );
-
-			    /**
 			     * Add support for full and wide align images.
 			     */
 			    add_theme_support( 'align-wide' );
@@ -229,10 +224,10 @@
                  * Enqueue main script and conditional script
                  */
 				global $theme_version;
-                wp_enqueue_script( 'main', get_template_directory_uri(  ) . 'script/script.js', array('jquery'), $theme_version, true );
+                wp_enqueue_script( 'main', get_template_directory_uri(  ) . '/script/script.js', array('jquery'), $theme_version, true );
 
                 if(is_home(  )){
-                    wp_enqueue_script( 'slider', get_template_directory_uri(  ) . 'script/slider.js', array('jquery'), $theme_version, true );
+                    wp_enqueue_script( 'slider', get_template_directory_uri(  ) . '/script/slider.js', array('jquery'), $theme_version, true );
                 }
             }
 			/**
