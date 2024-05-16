@@ -11,3 +11,11 @@ faqs.forEach( faq => {
         faq.classList.add('isOpen');
     })
 })
+
+// nav toggle
+const toggle = document.querySelector('.menu--toggle');
+const mobileNav = document.querySelector('.mobile--nav');
+toggle.addEventListener('click', () => {
+    toggle.classList.toggle('isActive');
+    mobileNav.classList.toggle('isActive');
+})
